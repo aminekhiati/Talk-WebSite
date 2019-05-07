@@ -1,0 +1,76 @@
+@layout('layouts.app')
+
+@section('content')
+	
+<section class="sign-up">
+	<center>
+		<div class="sign-up-container">
+			<h2>Sign Up</h2>
+			<br>
+			<form method="POST" action="/register">
+				<div class="form-group">
+					<label for="name">First name</label>
+					<input type='text' placeholder="first name"
+					class="form-control" name="firstName" required>
+				</div>
+				<div class="form-group">
+					<label for="name">Last name</label>
+					<input type='text' placeholder="Last name"
+					class="form-control" name="lastName" required>
+				</div>
+				<div class="form-group">
+						<label for="email">Email address</label>
+						<input type='email' placeholder="email"
+						class="form-control" name="email" required>
+				</div>
+				<div class="form-group">
+						<label for="password">Password</label>
+						<input type='password' placeholder="password"
+						class="form-control" name="password" required>
+				</div>
+				<div class="form-group">
+						<label for="confirmPassword">Confirm password</label>
+						<input type='password' placeholder="confirm password"
+						class="form-control" name="confirmPassword" required>
+				</div>
+				<div class="form-group">
+					<label style="visibility: hidden;">leave the same space</label>
+					<input type="submit" class="btn" 
+					value="SIGN UP" id="submit-register"/>
+				</div>
+				
+			</form>
+
+		</div>
+	</center>
+</section>
+
+	<!--  <main class="main" >
+        <div class="form-control" id="register-form">
+			<form method="POST" action="/register" class="form-inline">
+				<div class="form-group">
+				    <label for="name">First name</label>
+			    	<input type='text' class="form-control" id="firstName" name="firstName">
+				</div>
+				<div class="form-group">
+				    <label for="name">Last name</label>
+			    	<input type='text' class="form-control" id="lastName" name="lastName">
+				</div>
+				<div class="form-group">
+				    <label for="name">University</label>
+			    	<input type='text' class="form-control" id="univ" name="univ">
+				</div>
+				<div class="form-group">
+				    <label for="Email">Email address:</label>
+			    	<input type="email" class="form-control" id="email" name="email">
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<input type="password" class="form-control" id="password" name="password">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</main>  -->
+@endsection
+
