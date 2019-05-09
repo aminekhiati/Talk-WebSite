@@ -1,0 +1,421 @@
+/* importing needed fonts*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900');
+
+body{
+	font:14px/1.5 Montserrat, Arial, sans-serif;
+	padding:0;
+	margin:0;
+}
+
+		nav{
+			/*box-shadow:0 1px 1px #000;*/
+			padding-top: 0.25rem; padding-bottom: 0.25rem;
+			position: fixed !important;
+			width: 100%;
+			top:0;
+		}
+		.navbar {
+			background-color:   rgba(52, 58, 64,0) !important;
+			transition: 0.5s;
+		}
+		.nav-change{
+			background-color:   rgba(52, 58, 64,1) !important;
+			z-index: 9999999;
+			transition: 0.5s;
+			height: 80px;
+		}
+		.navbar-dark .navbar-nav .nav-link {
+   			 color: #ffffff
+
+		}
+		nav ul:first-of-type {
+			margin-left: 40px;	
+			font-size: 17px;
+		}
+	   nav ul:last-of-type {
+	    	font-size: 18px;
+	    	font-weight: bold;
+	    }
+	    #signUp{
+	    margin-right: 7px;
+		color: white;
+		font-weight: bold;
+		height:40px; 
+		width:115px;
+		background-color: #FB505D; 
+		border-radius: 9px;
+		text-align: center;
+	    }
+	    .navbar-nav > li > .show { background-color: #FF0000; }
+
+	    .show ul:first-of-type{
+	     	margin-left: 0px;
+		 }
+		 
+
+		/*when the user login*/
+		#profile_pic{
+			height: 55px;
+			width: 55px;
+			    
+     		border-radius: 50%;
+		}
+		.navbar_profile{
+			background-color: rgba(52, 58, 64) !important;
+			z-index: 9999999;
+			height: 80px;
+		}
+
+		#Logout{
+			margin-top: 13px;
+			margin-left: 10px;
+			border: 1.3px solid black;
+			border-radius:30px;
+			display: inline-block;
+			padding: 8px 12px;
+		}
+		.show #Logout{
+			margin: 0px;
+		}
+
+
+		/* first section */
+
+
+
+.main{
+	font-family:  Montserrat, Arial, sans-serif;
+	background-image: url("/images/background1.png");
+	height: 100vh;
+	width: 100%;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+
+.main img{
+	width: 88%;
+}
+.main h2{
+	font-size: 4vw;
+	font-weight: bold;
+
+}
+.main h4{
+	font-size: 3vw;
+	font-weight: 550;
+}
+#to_center{
+	position: absolute;
+	top:50%;
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff
+
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 768px) {
+	.sign-up-container{
+		width: 100% !important;
+		margin: 0;
+	}
+	.main h2{
+		font-size: 10vw;
+		font-weight: bold;
+	}
+	.main h4{
+		font-size: 8vw;
+		font-weight: 550;
+	}
+	#navbarNav{
+		margin: -4px -16px;
+		z-index: 999999999;
+		background-color:   rgba(52, 58, 64,1) !important;
+	}
+	nav ul li{
+		z-index: 999999999;
+		padding: 5px 20px;
+	}
+	.navbar{
+		background-color:   rgba(52, 58, 64,1) !important;
+		z-index: 999999999999999;
+	}
+	.navbar img{
+		margin-top: -15px !important;
+	}
+}
+
+/* footer's style */
+footer{
+	padding: 40px 40px 10px 40px;
+	background-color: #292c2f;
+	color: rgb(188, 184, 183);
+	font:17px/1.5 Montserat;
+}
+
+
+footer ul{
+	list-style: none;
+}
+footer ul li a{
+	color: rgb(188, 184, 183);
+	font:17px/1.5 Montserat;
+	font-weight: bold;
+}
+footer ul li a:hover{
+	color: white;
+	text-decoration: none;
+}
+footer .social-media-icons{
+	text-align: center;
+}
+footer .social-media-icons .fab{
+	padding: 15px;
+	font-size: 20px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 8px 2px;
+	border-radius: 50%;
+	color: black;
+	background-color: rgb(244, 244, 244);
+	transition: 0.3s;
+}
+footer hr{
+	border: 1px solid rgb(188, 184, 183);
+}
+footer .social-media-icons .fab:hover{
+	color: rgb(244, 244, 244);
+	background-color: black;
+	cursor: pointer;
+}
+footer p{
+	margin-bottom: 0 !important;
+}
+
+/*welcome section */
+#welcome-section{
+	font-family: 'Poppins', sans-serif;
+}
+
+#welcome-section .card-content{
+	width: 220px;
+	height: 220px;
+	padding: 25px;
+	transition: all .5s;
+}
+#welcome-section h2{
+	color: #2C3E50;
+	text-align: center;
+	margin: 25px 0;
+	font-size: 3rem;
+	
+}
+#welcome-section .card-content:hover{
+	box-shadow: 0 0 5px #ccc;
+}
+#welcome-section img{
+	margin-bottom: 3vh;
+}
+
+#welcome-section{
+	min-height: 450px;
+	line-height: 24px;
+	font-size: 16px;
+}
+.scroll-animations .animated{
+	display: none;
+}
+/* parallax effect on image backgrounds */
+.parallax{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* sign up section */
+.sign-up{
+	font-family:  Montserrat, Arial, sans-serif;
+	background-image: url("/images/bg2.png");
+	height: 100%;
+	width: 100%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	padding: 100px 0 20px 0;
+	color: white;
+	margin-bottom: 
+}
+.sign-up-container{
+	padding: 20px;
+	min-width: 200px;
+	width: 35%;
+	background-color: rgba(89,89,89,0.23);
+	border-radius: 25px;
+}
+.sign-up-container input{
+	width: 75%;
+	
+}
+#submit-register{
+	color: black;
+	background-color: #B7B7B7;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+}
+
+#contact_us{
+	min-height: 700px;
+	background-color: #E5E5E5;
+
+}
+#contact_us h2{
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#contact_us p{
+	font-size: 25px;
+}
+#contact_us label{
+	font-size: 22px;
+}
+#full_name,#email_contact_us{
+	width: 90%;
+	height: 35px;
+}
+
+
+#first_row{
+	padding-top: 80px;
+}
+#message_contact_us{
+	height: 228px;
+	width: 95%
+}
+#contact_us .col-lg-6 .row{
+	margin-bottom: 25px;
+}
+#contact_us_btn{
+	margin: 3.2% 0 12% 0;
+	background-color: #F5F5F5;
+}
+
+/*baseInfoProfile section (profile page)*/
+#baseInfoProfile{
+	margin-top: 125px;
+}
+
+#edit_profile {
+	float: right;
+	color: rgb(66, 34, 36);
+	font-size: 17px;
+}
+#baseInfoProfile h3{
+	margin-top:10px;
+	display: inline;
+}
+#baseInfoProfile h1{
+	font-weight: 600;
+}
+#baseInfoProfile p{
+	font-size: 24px;
+}
+
+#buttons_profile{
+	margin-top: 33px;
+}
+
+#message_button_profile{
+	margin-right: 10px;
+	font-weight: bolder	;	
+}
+hr{
+	border: 0.5px solid #434343;
+	margin-top: 25px;
+	margin-bottom: 33px;
+
+}
+
+#pic_center{
+	text-align:left;
+}
+
+#profile_pic_big{
+	height: 200px;
+	width: 200px;	
+}
+
+#detailInfoProfile h2{
+	font-size: 27px;
+	font-weight: bold;
+	margin:0;
+}
+
+#detailInfoProfile ul{
+	padding: 15px;
+}
+#detailInfoProfile li{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+address{
+	display: inline;
+}
+#social_media_list{
+	padding-top:0!important;
+	text-align: center;
+
+}
+#social_media_list li{
+	display: inline;
+	margin-right: 15px;
+	font-size: 35px;
+
+}
+#social_media_list li a{
+	color: #292c2f;
+}
+
+@media all and (max-width: 990px) {
+	#profile_pic_big{
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+	#pic_center{
+		text-align:center;
+	}
+	#buttons_profile{
+		text-align:center;
+		margin-top: 22px;
+	}
+	#nickname{
+		display: none!important;
+	}
+	#baseInfoProfile h1{
+		text-align: center;
+	}
+	#baseInfoProfile p{
+		text-align: center;
+	}
+	#edit_profile{
+		margin-top: 33px;
+		float: none;
+		display:block;
+		text-align:center;
+		width:100%;
+	}
+	#detailInfoProfile{
+		text-align: center;
+	}
+	#detailInfoProfile ul{
+		display: inline-table;
+	}
+
+}

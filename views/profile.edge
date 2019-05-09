@@ -1,0 +1,66 @@
+@layout('layouts.app_login')
+
+@section('content')
+<section id="baseInfoProfile">
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                   <center id="pic_center"><img src="images/Mounir_photo.png" id="profile_pic_big"></center>
+                </div>
+                <div class="col-lg-6">
+                    <h1>Taguiouine Mounir</h1>
+                    <p>Always aiming to be a rainbow at the end of a thunderstorm.</p>
+                    <div id="buttons_profile">
+                        <button type="button" class="btn btn-outline-dark" id="message_button_profile"> <i class="fas fa-comment-alt"></i>&nbsp; Send message</button>
+                        <button type="button" class="btn btn-light"><i class="fas fa-exclamation-triangle"></i>&nbsp;Report</button>
+                    </div>
+                </div>  
+                <div class="col-lg-3">
+                    <h3 id="nickname">Mou97</h3>
+                    <a href="" id="edit_profile"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-pen" ></i>&nbsp;<span>edit</span></button></a>
+                </div>    
+            </div>
+            
+            <hr>
+    </div>
+</section>
+
+
+<section id="detailInfoProfile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Docker</li>
+                    <li>Git</li>
+                    <li>Android dev</li>
+                    <li>NodeJs</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>interests</h2>
+                <ul>
+                    <li>Music Theory</li>
+                    <li>Woman rights</li>
+                    <li>Football</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <h2>Personal information</h2>
+                <ul>
+                    <li>Email: <address>m.taguiouine@esi-sba.dz</address></li>
+                    <li>Birthdate:  <time>09/05/1997</time></li>
+                </ul>
+                <ul id="social_media_list">
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+@endsection

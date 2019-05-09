@@ -1,0 +1,125 @@
+@layout('layouts.app')
+
+@section('content')	
+	<!-- main section -->
+	<section class="main parallax">
+		<div class="container-fluid">	
+			<div id="to_center">
+				<h2>Learn, Debate, Communicate</h2>
+				<img src="/images/greenline.png"/>
+				<h4>Talk! helps you express your ideas by debating <br>with others using your favorite language</h4>
+			</div>
+		</div>
+	</section>
+	
+
+
+
+
+
+
+	{{--  welcome to Talk section   --}}
+	<section id="welcome-section">
+		<h2>Welcome to Talk</h2>
+		<div class="container scroll-animations">
+			<div class="row">
+				<div class="col-lg-4 animated">
+						<center>
+						<div class="card-content">
+								<img src="/images/aboutus/translator.png" alt="translator"/>
+								<p>Attending Talk!<br>will improve your communication skills</p>
+						</div>
+					</center>
+				</div>
+				<div class="col-lg-4 animated">
+						<center>
+						<div class="card-content">
+								<img src="/images/aboutus/network.png" alt="network"/>
+								<p>Attending Talk!<br>will improve your communication skills</p>
+						</div>
+					</center>
+				</div>
+				<div class="col-lg-4 animated">
+						<center>
+						<div class="card-content">
+								<img src="/images/aboutus/idea.png" alt="idea"/>
+								<p>Attending Talk!<br>will improve your communication skills</p>
+						</div>
+					</center>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+					<div class="col-lg-4 animated">
+							<center>
+							<div class="card-content">
+									<img src="/images/aboutus/group.png" alt="group"/>
+									<p>You will meet a group of 6 to 12 person in a regular
+										time from time to bla </p>
+							</div>
+						</center>
+					</div>
+					<div class="col-lg-4 animated">
+							<center>
+							<div class="card-content">
+									<img src="/images/aboutus/translate.png" alt="translate"/>
+									<p>Talk! will develop your language 
+										Lorem ipsum dolor sit amet consectetur.</p>
+							</div>
+						</center>
+					</div>
+					<div class="col-lg-4 animated">
+							<center>
+							<div class="card-content">
+									<img src="/images/aboutus/translator.png" alt="translator"/>
+									<p>Lorem, ipsum dolor sit amet consectetur 
+										adipisicing elit. Sit alias doloremque facilis?</p>
+							</div>
+						</center>
+					</div>
+			</div>
+			<br>
+		</div>
+	</section>
+
+
+ <!-- CONTACT US -->
+	<section  id="contact_us">
+		<div class="container-fluid">
+			<div class="row" id="first_row">
+				<div class="col-lg-6">
+					<h2>Contact us</h2>
+					<p>Have any query? Leave us the message with<br>some information and we will be in touch soon!</p>
+				</div>
+
+				<div class="col-lg-6">
+					<form>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group full_name_Email">
+			  						<label for="name">Full name:</label>
+			  						<input type="text" class="form-control" id="full_name">
+		  						</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group full_name_Email">
+								  	<label for="pwd">Email address:</label>
+								  	<input type="text" class="form-control" id="email_contact_us">
+								</div>
+							</div>
+							
+						</div>
+						<div class="form-group">
+ 							<label for="message">Your message:</label>
+							<textarea class="form-control" rows="5" id="message_contact_us"></textarea>
+						</div>
+						<input type="submit" class="btn" value="Contact us" id="contact_us_btn">
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</section>
+@endsection
