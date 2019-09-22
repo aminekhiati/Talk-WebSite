@@ -57,12 +57,20 @@
 
     <!-- Sign in/up list (special style)-->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/login">Login &nbsp;&nbsp;</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/register" id="signUp">Sign up</a>
-      </li>
+	  
+	{% if not user.is_authenticated %}
+		<li class="nav-item active">
+			<a class="nav-link" href="/login">Login &nbsp;&nbsp;</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/register" id="signUp">Sign up</a>
+		</li>
+	{% else %}
+		<form action="{% url 'logout' %}">
+				<button class="btn btn-danger">Log out</button>
+		</form>
+	{% endif %}
+      
   	</ul>
 
      
