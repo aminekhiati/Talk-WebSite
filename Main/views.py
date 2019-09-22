@@ -6,6 +6,10 @@ from django.shortcuts import redirect
 # Create your views here.
 
 
+def home(request):
+    return render(request,'Main/index.html')
+
+
 def login_request(request):
     form = AuthenticationForm()
     if request.method == "POST":
@@ -23,4 +27,10 @@ def login_request(request):
                 messages.info(request,"User dosn't exist")
         else:
             messages.info(request,"Invalid Syntaxe")
+    redirect('home')
     return render(request,"Main/login.html", {"form":form})
+
+def logout_request(request):
+    logout(request)
+    return redirect('home')
+

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 
 <head>
@@ -6,15 +7,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="../static/favicon.png" />
+	<link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
 
 	<title>Talk!</title>
 	<!--  Bootstrap (to be replaced with CDN link) -->
-	<link rel="stylesheet" href="../public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 		<!--  animate css (to be replaced with CDN link) -->
-		<link rel="stylesheet" href="../public/css/animate.css">
+		<link rel="stylesheet" href="{% static "css/animate.css"%}">
 	<!-- Normal css -->
-	<link rel="stylesheet" href="../public/css/main.css">
+	<link rel="stylesheet" href="{% static "css/main.css"%}">
 
 	<!-- Font awesome (for icons)-->
 	<link rel="stylesheet" 
@@ -31,7 +32,7 @@
 
 
   	<a class="navbar-brand" id="logo" href="/">
-    	<img src="../static/Logo.png" width="160" height="70" class="d-inline-block align-top" alt="">
+    	<img src="{% static "images/Logo.png"%}" width="160" height="70" class="d-inline-block align-top" alt="">
   	</a>
 
   <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,7 +74,7 @@
 		<div class="container-fluid">	
 			<div id="to_center">
 				<h2>Learn, Debate, Communicate</h2>
-				<img src="../static/greenline.png"/>
+				<img src="{% static "images/greenline.png"%}"/>
 				<h4>Talk! helps you express your ideas by debating <br>with others using your favorite language</h4>
 			</div>
 		</div>
@@ -85,7 +86,7 @@
 				<div class="col-lg-4 animated">
 						<center>
 						<div class="card-content">
-								<img src="../static/aboutus/translator.png" alt="translator"/>
+								<img src="{% static "aboutus/translator.png"%}" alt="translator"/>
 								<p>Attending Talk!<br>will improve your communication skills</p>
 						</div>
 					</center>
@@ -93,7 +94,7 @@
 				<div class="col-lg-4 animated">
 						<center>
 						<div class="card-content">
-								<img src="../static/aboutus/network.png" alt="network"/>
+								<img src="{% static "aboutus/network.png"%}" alt="network"/>
 								<p>Attending Talk!<br>will improve your communication skills</p>
 						</div>
 					</center>
@@ -101,7 +102,7 @@
 				<div class="col-lg-4 animated">
 						<center>
 						<div class="card-content">
-								<img src="../static/aboutus/idea.png" alt="idea"/>
+								<img src="{% static "aboutus/idea.png"%}" alt="idea"/>
 								<p>Attending Talk!<br>will improve your communication skills</p>
 						</div>
 					</center>
@@ -112,7 +113,7 @@
 					<div class="col-lg-4 animated">
 							<center>
 							<div class="card-content">
-									<img src="../static/aboutus/group.png" alt="group"/>
+									<img src="{% static "aboutus/group.png"%}" alt="group"/>
 									<p>You will meet a group of 6 to 12 person in a regular
 										time from time to bla </p>
 							</div>
@@ -121,7 +122,7 @@
 					<div class="col-lg-4 animated">
 							<center>
 							<div class="card-content">
-									<img src="../static/aboutus/translate.png" alt="translate"/>
+									<img src="{% static "aboutus/translate.png"%}" alt="translate"/>
 									<p>Talk! will develop your language 
 										Lorem ipsum dolor sit amet consectetur.</p>
 							</div>
@@ -130,7 +131,7 @@
 					<div class="col-lg-4 animated">
 							<center>
 							<div class="card-content">
-									<img src="../static/aboutus/translator.png" alt="translator"/>
+									<img src="{% static "aboutus/translator.png"%}" alt="translator"/>
 									<p>Lorem, ipsum dolor sit amet consectetur 
 										adipisicing elit. Sit alias doloremque facilis?</p>
 							</div>
@@ -187,7 +188,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<a href="/">
-						<img src="../static/Logo.png" class="logo" />
+						<img src="{% static "images/Logo.png"%}" class="logo" />
 						<br>
 					</a><br>
 					<p>
@@ -218,11 +219,11 @@
 	</footer>
 	<!-- Importing needed scripts -->	
 	<!-- jQuery library (replace with CDN link)-->
-	<script src="../public/js/jquery.min.js"></script>
+	<script src="{% static "js/jquery.min.js"%}"></script>
 	<!-- Bootstrap (replace with CDN link)-->
-	<script src="../public/js/bootstrap.min.js"></script>
+	<script src="{% static "js/bootstrap.min.js"%}"></script>
 	<!-- main js file -->
-	<script src="../public/js/main.js"></script>
+	<script src="{% static "js/main.js"%}"></script>
 
 </body>
 
