@@ -1,0 +1,25 @@
+@layout('layouts.app_login')
+
+@section('content')
+<style scoped>
+#vote{
+    padding-top: 32vh;
+}    
+@media (max-width:700px){
+    #vote{
+    padding-top: 23vh;
+    }    
+}
+</style>
+<form id="vote">
+    <h1>Write your seggestion for the next session</h1>
+    <p>The admin will review your question</p>
+    <ul>
+        <li class="container-fluid">
+                <input type="text" id="add_question">
+                <input type="submit" class="btn" id="submit_vote" value="Submit">
+        </li>
+    </ul>
+</form>
+
+@endsection

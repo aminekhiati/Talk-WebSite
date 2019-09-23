@@ -417,5 +417,137 @@ address{
 	#detailInfoProfile ul{
 		display: inline-table;
 	}
+}
+/*user home */
+#vote{
+	padding-top: 100px;
+	padding-left: 7vw;
+	height: 100vh;	
+}
+#vote h1{
+	font-weight: 600;
+	font-size: 29px;
+	margin-bottom: 0;
+}
+#vote > p{
+	color: #828282;	
+	font-size: 15px;
+}
+#vote ul{
+	margin: 0;
+	padding: 0;
+}
+#vote ul li{
+	text-decoration: none;
+	list-style-type: none;
+	min-height: 45px;
+	width: 60vw;
+	display:flex;
+	align-items:center;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+#vote .vote_choice{
+	padding-left: 20px;
+	border: 1px solid #828282;
+	border-radius: 5px;
+	position: relative;
+}
+#vote li p{
+	margin:7px 0;
+}
+#vote .vote_choice p{
+	color: #000000;
+	font-size: 16px;
+	width: 80%;
+}
+.container-chk {
+	display: block;
+	position: relative;
+	margin-bottom: 12px;
+	margin-top: -12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: auto;
+	margin-right: 40px;
+  }
+  
+.container-chk input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	}
 
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+	border: 1px solid #828282;
+	}
+
+.container-chk:hover input ~ .checkmark {
+	background-color: #ccc;
+	}
+
+.container-chk input:checked ~ .checkmark {
+	background-color: #FB505D;
+	}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+	}
+
+.container-chk input:checked ~ .checkmark:after {
+	display: block;
+	}
+
+.container-chk .checkmark:after {
+	top: 8px;
+	left: 8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+	}
+/*submit vote*/
+#submit_vote{
+	margin-left: auto;
+	background-color: #FB505D;
+	color: white;
+	/* float: right; */
+}
+#add_question{
+	width: 80%;
+	height: 38px;
+}
+#vote a{
+	color:#292C2F;
+	font-size: 14px;
+}
+@media (max-width:900px){
+	#vote h1{
+		font-size: 24px;
+	}
+	#vote ul li{
+		width: 80vw;
+	}
+	#vote ul li p{
+		font-size: 14px;
+	}
+}
+@media (max-width:600px){
+	#add_question{
+		width: 65%
+	}
 }
