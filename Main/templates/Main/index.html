@@ -58,18 +58,17 @@
     <!-- Sign in/up list (special style)-->
     <ul class="navbar-nav ml-auto">
 	  
-	{% if not user.is_authenticated %}
 		<li class="nav-item active">
 			<a class="nav-link" href="/login">Login &nbsp;&nbsp;</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="/register" id="signUp">Sign up</a>
 		</li>
-	{% else %}
+	{% comment %} {% else %}
 		<form action="{% url 'logout' %}">
 				<button class="btn btn-danger">Log out</button>
 		</form>
-	{% endif %}
+	{% endif %} {% endcomment %}
       
   	</ul>
 
