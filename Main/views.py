@@ -3,6 +3,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
@@ -22,17 +24,18 @@ def login_request(request):
             if user is not None:
                 login(request,user)
                 messages.success(request, "Logged in successfully")
-                return redirect('home')
+                return redirect('homeLogged')
             else:
                 messages.info(request,"User dosn't exist")
         else:
             messages.info(request,"Invalid Syntaxe")
-    redirect('home')
     return render(request,"Main/login.html", {"form":form})
 
 def logout_request(request):
     logout(request)
     return redirect('home')
 
-# def homeLogged(request):
-#     return render(request,'Main/')
+
+@login_required
+def homeLogged(request):
+     return render(request,'Main/home.html')
