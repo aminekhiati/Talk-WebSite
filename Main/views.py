@@ -42,12 +42,13 @@ def homeLogged(request):
 
 def signup(request):
     if request.method == 'POST':
+        username = request.POST.get('username')
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
         password = request.POST.get('password')
-        User.objects.create_user(username=first_name, password=password , last_name=last_name , first_name=first_name , email=email )
-        authenticate_user = authenticate(username=first_name,password=password)
+        User.objects.create_user(username=username, password=password , last_name=last_name , first_name=first_name , email=email )
+        authenticate_user = authenticate(username=username,password=password)
         login(request,authenticate_user)
         return redirect('homeLogged')
 
