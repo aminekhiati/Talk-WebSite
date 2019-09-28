@@ -62,7 +62,7 @@
 			<a class="nav-link" href="/login">Login &nbsp;&nbsp;</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="/register" id="signUp">Sign up</a>
+			<a class="nav-link" href="{% url 'signUp' %}" id="signUp">Sign up</a>
 		</li>
 	{% comment %} {% else %}
 		<form action="{% url 'logout' %}">

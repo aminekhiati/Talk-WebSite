@@ -38,4 +38,8 @@ def logout_request(request):
 
 @login_required
 def homeLogged(request):
-     return render(request,'Main/home.html')
+    return render(request,'Main/home.html')
+
+
+def signUp(request):
+    return render(request,'Main/signUp.html')
