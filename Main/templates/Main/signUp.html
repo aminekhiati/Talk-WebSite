@@ -61,7 +61,7 @@
         <a class="nav-link" href="/login">Login &nbsp;&nbsp;</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/register" id="signUp">Sign up</a>
+        <a class="nav-link" href="{% url 'signup' %}" id="signUp">Sign up</a>
       </li>
   	</ul>
 
@@ -74,16 +74,17 @@
 		<div class="sign-up-container">
 			<h2>Sign Up</h2>
 			<br>
-			<form method="POST" action="/register">
+			<form method="POST" >
+				{% csrf_token %}
 				<div class="form-group">
 					<label for="name">First name</label>
 					<input type='text' placeholder="first name"
-					class="form-control" name="firstName" required>
+					class="form-control" name="first_name" required>
 				</div>
 				<div class="form-group">
 					<label for="name">Last name</label>
 					<input type='text' placeholder="Last name"
-					class="form-control" name="lastName" required>
+					class="form-control" name="last_name" required>
 				</div>
 				<div class="form-group">
 						<label for="email">Email address</label>
