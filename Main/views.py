@@ -4,7 +4,8 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from .forms import *
+from django.contrib.auth.models import User
+
 
 # Create your views here.
 
@@ -23,7 +24,7 @@ def login_request(request):
             user = authenticate(username = username, password=password)
             if user is not None:
                 login(request,user)
-                return redirect('homeLogged')
+                return redirect('homeLogged',pk = user.id)
             else:
                 messages.info(request,"User dosn't exist")
         else:
@@ -36,7 +37,8 @@ def logout_request(request):
 
 
 @login_required
-def homeLogged(request):
+def homeLogged(request,pk):
+    User.objects.get(pk=pk)
     return render(request,'Main/home.html')
 
 
@@ -50,6 +52,6 @@ def signup(request):
         User.objects.create_user(username=username, password=password , last_name=last_name , first_name=first_name , email=email )
         authenticate_user = authenticate(username=username,password=password)
         login(request,authenticate_user)
-        return redirect('homeLogged')
+        return redirect('homeLogged',pk = authenticate_user.id)
 
     return render(request,'Main/signUp.html')
