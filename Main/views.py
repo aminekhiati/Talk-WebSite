@@ -24,7 +24,7 @@ def login_request(request):
             user = authenticate(username = username, password=password)
             if user is not None:
                 login(request,user)
-                return redirect('homeLogged',pk = user.id)
+                return redirect('home')
             else:
                 messages.info(request,"User dosn't exist")
         else:
@@ -33,12 +33,11 @@ def login_request(request):
 
 def logout_request(request):
     logout(request)
-    return redirect('home')
+    return redirect('')
 
 
 @login_required
-def homeLogged(request,pk):
-    User.objects.get(pk=pk)
+def homeLogged(request):
     return render(request,'Main/home.html')
 
 
@@ -52,6 +51,12 @@ def signup(request):
         User.objects.create_user(username=username, password=password , last_name=last_name , first_name=first_name , email=email )
         authenticate_user = authenticate(username=username,password=password)
         login(request,authenticate_user)
-        return redirect('homeLogged',pk = authenticate_user.id)
+        return redirect('home')
 
     return render(request,'Main/signUp.html')
+
+
+@login_required
+def profile(request,pk):
+    User.objects.get(pk=pk)
+    return render(request,'Main/profile.html')    

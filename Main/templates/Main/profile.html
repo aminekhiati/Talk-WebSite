@@ -60,10 +60,10 @@
     <!-- Sign in/up list (special style)-->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><img src="../../static/images/Mounir_photo.png" id="profile_pic"></a>
+        <a class="nav-link" href="#"><img src="{{user.profile.image.url}}" id="profile_pic"></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="Logout">Logout</a>
+        <a class="nav-link" href="{% url 'logout' %}" id="Logout">Logout</a>
       </li>
   	</ul>
 
@@ -76,10 +76,10 @@
     <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                   <center id="pic_center"><img src="../../static/images/Mounir_photo.png" id="profile_pic_big"></center>
+                   <center id="pic_center"><img src="{{user.profile.image.url}}" id="profile_pic_big"></center>
                 </div>
                 <div class="col-lg-6">
-                    <h1>Taguiouine Mounir</h1>
+                    <h1>{{ user.first_name }} {{ user.last_name }} </h1>
                     <p>Always aiming to be a rainbow at the end of a thunderstorm.</p>
                     <div id="buttons_profile">
                         <button type="button" class="btn btn-outline-dark" id="message_button_profile"> <i class="fas fa-comment-alt"></i>&nbsp; Send message</button>
@@ -87,7 +87,7 @@
                     </div>
                 </div>  
                 <div class="col-lg-3">
-                    <h3 id="nickname">Mou97</h3>
+                    <h3 id="nickname">{{ user.username }}</h3>
                     <a href="" id="edit_profile"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-pen" ></i>&nbsp;<span>edit</span></button></a>
                 </div>    
             </div>
@@ -120,7 +120,7 @@
                     <div class="col-md-5">
                         <h2>Personal information</h2>
                         <ul>
-                            <li>Email: <address>m.taguiouine@esi-sba.dz</address></li>
+                            <li>Email: <address>{{user.email}}</address></li>
                             <li>Birthdate:  <time>09/05/1997</time></li>
                         </ul>
                         <ul id="social_media_list">
@@ -167,7 +167,7 @@
                 </div>
             </div>
             <hr>
-            <p align="center">&copy;All rights reserved to Naas - 2019</p>
+            <p align="center">&copy;All rights reserved - 2019</p>
         </footer>
      	<!-- Importing needed scripts -->	
 	<!-- jQuery library (replace with CDN link)-->
