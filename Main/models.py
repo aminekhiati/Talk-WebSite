@@ -16,7 +16,14 @@ class Profile (models.Model):
         return self.user.username
 
 class Skill(models.Model):
-    profile=models.ForeignKey(Profile,on_delete=models.CASCADE,related_name="skills")
+    profile=models.ForeignKey(Profile,on_delete=models.CASCADE,related_name="skill")
+    value = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.value
+
+class Interest(models.Model):
+    profile=models.ForeignKey(Profile,on_delete=models.CASCADE,related_name="interest")
     value = models.CharField(max_length=100)
 
     def __str__(self):

@@ -60,9 +60,11 @@ def signup(request):
 @login_required
 def profile(request,pk):
     skills = Skill.objects.all()
+    interests = Interest.objects.all()
     User.objects.get(pk=pk)
 
     context ={
+        "interests":interests,
         "skills":skills
     }
     return render(request,'Main/profile.html',context)    

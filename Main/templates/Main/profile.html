@@ -103,17 +103,17 @@
                     <div class="col-md-3">
                         <h2>Skills</h2>
                         <ul>
-                            {% for skill in skills %}
-                            <li>{{skill.value}}</li>
+                            {% for sk in skills %}
+                            <li>{{sk.value}}</li>
                             {% endfor %}
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <h2>interests</h2>
                         <ul>
-                            <li>Music Theory</li>
-                            <li>Woman rights</li>
-                            <li>Football</li>
+                            {% for in in interests %}
+                            <li>{{in.value}}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="col-md-5">
