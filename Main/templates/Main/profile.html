@@ -103,10 +103,9 @@
                     <div class="col-md-3">
                         <h2>Skills</h2>
                         <ul>
-                            <li>Docker</li>
-                            <li>Git</li>
-                            <li>Android dev</li>
-                            <li>NodeJs</li>
+                            {% for skill in skills %}
+                            <li>{{skill.value}}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="col-md-4">

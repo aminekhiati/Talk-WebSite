@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from .models import *
 
 
 # Create your views here.
@@ -58,5 +59,10 @@ def signup(request):
 
 @login_required
 def profile(request,pk):
+    skills = Skill.objects.all()
     User.objects.get(pk=pk)
-    return render(request,'Main/profile.html')    
+
+    context ={
+        "skills":skills
+    }
+    return render(request,'Main/profile.html',context)    
