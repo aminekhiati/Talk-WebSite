@@ -8,5 +8,6 @@ urlpatterns =[
     path('login/',views.login_request,name ='login'),
     path('logout/',views.logout_request,name='logout'),
     path('signup/',views.signup,name='signup'),
-    path('profile/<int:pk>',views.profile,name='profile')
+    path('profile/<int:pk>',views.profile,name='profile'),
+    path('add_theme',views.theme,name='theme')
 ]

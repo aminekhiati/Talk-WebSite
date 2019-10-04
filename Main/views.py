@@ -68,3 +68,8 @@ def profile(request,pk):
         "skills":skills
     }
     return render(request,'Main/profile.html',context)    
+
+
+@login_required
+def theme(request):
+    return render(request,'Main/add.html')

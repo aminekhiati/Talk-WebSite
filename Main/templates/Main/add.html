@@ -60,10 +60,10 @@
     <!-- Sign in/up list (special style)-->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><img src="../../static/images/Mounir_photo.png" id="profile_pic"></a>
+        <a class="nav-link" href="#"><img src="{{user.profile.image.url}}" id="profile_pic"></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="Logout">Logout</a>
+        <a class="nav-link" href="{% url 'logout' %}" id="Logout">Logout</a>
       </li>
   	</ul>
 
