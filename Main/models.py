@@ -32,3 +32,13 @@ class Interest(models.Model):
 
 class Theme(models.Model):
     context = models.TextField()
+
+    def __str__(self):
+        return self.context
+
+
+class Suggested_theme(models.Model):
+    context = models.TextField()
+
+    def __str__(self):
+        return self.context

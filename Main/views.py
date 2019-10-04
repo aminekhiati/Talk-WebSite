@@ -76,4 +76,9 @@ def profile(request,pk):
 
 @login_required
 def theme(request):
+    if request.method =='POST':
+        s_theme = Suggested_theme()
+        s_theme.context = request.POST.get('add_question')
+        s_theme.save()
+        return redirect('home')
     return render(request,'Main/add.html')
