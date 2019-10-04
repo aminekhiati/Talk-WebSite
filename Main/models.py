@@ -9,7 +9,7 @@ class Profile (models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,related_name="profile")
     image = models.ImageField(null=True,upload_to='profile_pics',default='profile_pics/man.png')
     birthday = models.DateField(null=True,default=datetime.date.today )
-    Bio = models.TextField(null=True)
+    bio = models.TextField(null=True)
 
 
     def __str__(self):

@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-lg-6">
                     <h1>{{ user.first_name }} {{ user.last_name }} </h1>
-                    <p>Always aiming to be a rainbow at the end of a thunderstorm.</p>
+                    <p>{{user.profile.bio}}</p>
                     <div id="buttons_profile">
                         <button type="button" class="btn btn-outline-dark" id="message_button_profile"> <i class="fas fa-comment-alt"></i>&nbsp; Send message</button>
                         <button type="button" class="btn btn-light"><i class="fas fa-exclamation-triangle"></i>&nbsp;Report</button>
@@ -120,7 +120,7 @@
                         <h2>Personal information</h2>
                         <ul>
                             <li>Email: <address>{{user.email}}</address></li>
-                            <li>Birthdate:  <time>09/05/1997</time></li>
+                            <li>Birthdate:  <time>{{user.profile.birthday}}</time></li>
                         </ul>
                         <ul id="social_media_list">
                             <li><a href=""><i class="fab fa-facebook"></i></a></li>
