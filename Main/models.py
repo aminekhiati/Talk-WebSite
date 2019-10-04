@@ -28,3 +28,7 @@ class Interest(models.Model):
 
     def __str__(self):
         return self.value
+
+
+class Theme(models.Model):
+    context = models.TextField()

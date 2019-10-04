@@ -7,3 +7,4 @@ from .models import *
 admin.site.register(Profile)
 admin.site.register(Skill)
 admin.site.register(Interest)
+admin.site.register(Theme)

@@ -76,14 +76,16 @@
     <h1>Vote for the next session theme</h1>
     <p>you can only select one</p>
     <ul>
+        {% for th in themes%}
         <li class="vote_choice activeV">
-            <p>What do you think about rasism?</p>
+            <p>{{th.context}}</p>
             <label class="container-chk">
                 <input type="radio" checked="checked" name="radio">
                 <span class="checkmark"></span>
             </label>
         </li>
-        <li class="vote_choice">
+        {% endfor %}
+        {% comment %} <li class="vote_choice">
             <p>What do you think about rasism What do you?</p>
             <label class="container-chk">
                 <input type="radio" name="radio">
@@ -103,7 +105,7 @@
                 <input type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-        </li>
+        </li> {% endcomment %}
         <li>
             <a href="{% url 'theme' %}">Suggest a theme</a>
             <input type="submit" class="btn" id="submit_vote" value="Submit">

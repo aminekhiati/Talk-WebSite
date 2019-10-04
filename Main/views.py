@@ -39,7 +39,11 @@ def logout_request(request):
 
 @login_required
 def homeLogged(request):
-    return render(request,'Main/home.html')
+    themes = Theme.objects.all()
+    context = {
+        'themes':themes
+    }
+    return render(request,'Main/home.html',context)
 
 
 def signup(request):
