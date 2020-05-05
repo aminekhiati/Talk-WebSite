@@ -38,7 +38,7 @@ class Theme(models.Model):
 
 
 class Suggested_theme(models.Model):
-    context = models.TextField()
+    context = models.TextField(null=True)
 
     def __str__(self):
-        return self.context
+        return str(self.context)
