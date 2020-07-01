@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm,UserCreationForm,UserChangeForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import *
+from django.views import generic
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -54,11 +56,15 @@ def signup(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         User.objects.create_user(username=username, password=password , last_name=last_name , first_name=first_name , email=email )
+        
         authenticate_user = authenticate(username=username,password=password)
         login(request,authenticate_user)
         return redirect('home')
 
     return render(request,'Main/signUp.html')
+
+
+
 
 
 @login_required
